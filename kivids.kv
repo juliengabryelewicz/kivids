@@ -1,0 +1,274 @@
+#:import MapSource kivy_garden.mapview.MapSource
+
+<KividsWidget>:
+	orientation:"horizontal"
+	MenuWidget:
+		orientation:"vertical"
+		width:200
+		size_hint: None, 1
+		Button:
+			text: "Géographie"
+			text_size: self.size
+			font_size: '20sp'
+			size: 200,120
+			size_hint: None, None
+			halign: 'center'
+			valign: 'center'
+			markup: True
+			on_press: app.root.ids.screen_manager.current='MapScreen'
+		Button:
+			text: "Couleurs"
+			text_size: self.size
+			font_size: '20sp'
+			size: 200,120
+			size_hint: None, None
+			halign: 'center'
+			valign: 'center'
+			markup: True
+			on_press: app.root.ids.screen_manager.current='ColorScreen'
+		Button:
+			text: "Maths"
+			text_size: self.size
+			font_size: '20sp'
+			size: 200,120
+			size_hint: None, None
+			halign: 'center'
+			valign: 'center'
+			markup: True
+			on_press: app.root.ids.screen_manager.current='MathsScreen'
+		Button:
+			text: "Paint"
+			text_size: self.size
+			font_size: '20sp'
+			size: 200,120
+			size_hint: None, None
+			halign: 'center'
+			valign: 'center'
+			markup: True
+			on_press: app.root.ids.screen_manager.current='PaintScreen'
+		Button:
+			text: "Horloge"
+			text_size: self.size
+			font_size: '20sp'
+			size: 200,120
+			size_hint: None, None
+			halign: 'center'
+			valign: 'center'
+			markup: True
+			on_press: app.root.ids.screen_manager.current='ClockScreen'
+
+	ScreenWidget:			
+		id: screen_manager
+		ClockScreen:
+        ColorScreen:
+        PaintScreen:
+        MathsScreen:
+        MapScreen:						
+
+<ClockScreen>:
+	id: clock_screen
+	name: 'ClockScreen'
+	manager: 'screen_manager'
+    ClockWidget:
+
+<ClockWidget>:
+    on_pos: self.update_clock()
+    on_size: self.update_clock()
+    face: face
+    hands: hands
+    FloatLayout:
+        id: face
+        size_hint: None, None
+        pos_hint: {"center_x":0.5, "center_y":0.5}
+        size: 350, 350
+        canvas:
+            Color:
+                rgb: 0.1, 0.1, 0.1
+            Ellipse:
+                size: self.size
+                pos: self.pos
+        Label:
+            text:"1"
+            pos_hint: {'center_x': 0.725, 'center_y': 0.8897114317029975}
+            font_size:'24sp'
+        Label:
+            text:"2"
+            pos_hint: {'center_x': 0.8897114317029974, 'center_y': 0.7250000000000001}
+            font_size:'24sp'
+        Label:
+            text:"3"
+            pos_hint: {'center_x': 0.95, 'center_y': 0.5}
+            font_size:'24sp'
+        Label:
+            text:"4"
+            pos_hint: {'center_x': 0.8897114317029975, 'center_y': 0.27500000000000013}
+            font_size:'24sp'
+        Label:
+            text:"5"
+            pos_hint: {'center_x': 0.725, 'center_y': 0.11028856829700256}
+            font_size:'24sp'
+        Label:
+            text:"6"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.04999999999999999}
+            font_size:'24sp'
+        Label:
+            text:"7"
+            pos_hint: {'center_x': 0.27500000000000013, 'center_y': 0.11028856829700251}
+            font_size:'24sp'
+        Label:
+            text:"8"
+            pos_hint: {'center_x': 0.11028856829700273, 'center_y': 0.2749999999999998}
+            font_size:'24sp'
+        Label:
+            text:"9"
+            pos_hint: {'center_x': 0.04999999999999999, 'center_y': 0.49999999999999994}
+            font_size:'24sp'
+        Label:
+            text:"10"
+            pos_hint: {'center_x': 0.11028856829700262, 'center_y': 0.7250000000000001}
+            font_size:'24sp'
+        Label:
+            text:"11"
+            pos_hint: {'center_x': 0.2749999999999998, 'center_y': 0.8897114317029973}
+            font_size:'24sp'
+        Label:
+            text:"12"
+            pos_hint: {'center_x': 0.4999999999999999, 'center_y': 0.95}
+            font_size:'24sp'
+    FloatLayout:
+        id: hands
+        size_hint: None, None
+        pos_hint: {"center_x":0.5, "center_y":0.5}
+        size: 350, 350
+    FloatLayout:
+        size_hint: 1, 0.2
+        Label:
+            id:text_hour
+            text:''
+            font_size:'34sp'
+            markup:True
+
+<PaintScreen>:
+	id: paint_screen
+	name: 'PaintScreen'
+	manager: 'screen_manager'
+    BoxLayout:
+    	orientation:"vertical"
+        PaintWidget:
+            id: paint_widget
+        Button:
+            text: "Effacer"
+            on_press: paint_screen.clear_canvas()
+            size: 75, 50
+            size_hint: None, None
+
+<MathsScreen>:
+	id: maths_screen
+	name: 'MathsScreen'
+	manager: 'screen_manager'
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            id: result
+            font_size:'40sp'
+        Label:
+            id: question
+            font_size:'50sp'
+        BoxLayout:
+            orientation:"horizontal"
+            id:box_choices
+
+<ColorScreen>:
+	id: color_screen
+	name: 'ColorScreen'
+	manager: 'screen_manager'
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            text:'Choisis une couleur:'
+            font_size:'30sp'
+        BoxLayout:
+            orientation:"horizontal"
+            size_hint_y: None
+            Button:
+                text:'Blanc'
+                background_color:(1.0, 0.95, 0.95, 1.0)
+                on_press: color_screen.add_color((255, 255, 255))
+            Button:
+                text:'Noir'
+                background_color:(0, 0, 0, 1.0)
+                on_press: color_screen.add_color((0, 0, 0))
+            Button:
+                text:'Gris'
+                on_press: color_screen.add_color((128, 128, 128))
+            Button:
+                text:'Vert'
+                background_color:(0, 1.0, 0, 1.0)
+                on_press: color_screen.add_color((0, 255, 0))
+            Button:
+                text:'Bleu'
+                background_color:(0, 0, 1.0, 1.0)
+                on_press: color_screen.add_color((0, 0, 255))
+            Button:
+                text:'Rouge'
+                background_color:(1.0, 0, 0, 1.0)
+                on_press: color_screen.add_color((255, 0, 0))
+            Button:
+                text:'Jaune'
+                background_color:(1.0, 1.0, 0, 1.0)
+                on_press: color_screen.add_color((255, 255, 0))
+            Button:
+                text:'Orange'
+                background_color:(1.0, 0.65, 0, 1.0)
+                on_press: color_screen.add_color((255, 165, 0))
+            Button:
+                text:'Violet'
+                background_color:(0.5, 0, 0.5, 1.0)
+                on_press: color_screen.add_color((128, 0, 128))
+            Button:
+                text:'Rose'
+                background_color:(1.0, 0.7, 0.75, 1.0)
+                on_press: color_screen.add_color((255, 192, 203))
+            Button:
+                text:'Marron'
+                background_color:(0.65, 0.2, 0.2, 1.0)
+                on_press: color_screen.add_color((165, 42, 42))
+        Label:
+            text:'Couleurs choisies'
+            font_size:'30sp'
+        BoxLayout:
+            orientation:"horizontal"
+            id: choice_colors
+            size_hint_y:None
+        Label:
+            text:'Résultat :'
+            font_size:'30sp'
+        BoxLayout:
+            orientation:"horizontal"
+            Button:
+                text:'Effacer'
+                on_press: color_screen.clean_colors()
+            BoxLayout:
+                id: result_colors
+
+<RectangleLabel>:
+    size: (150, 100)
+    background_color:
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<MapScreen>:
+	id: map_screen
+	name: 'MapScreen'
+	manager: 'screen_manager'
+    BoxLayout:
+        MapView:
+            id: mapview
+            lat: 50.6394
+            lon: 3.057
+            zoom: 5
+            map_source: MapSource(min_zoom=5,max_zoom=5)

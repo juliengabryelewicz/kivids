@@ -1,0 +1,252 @@
+{
+	"countries" : [
+        {
+            "title":"Albanie",
+            "lat":41.156986,
+            "lon":20.18122199999999,
+            "anthem":"Hymni i Flamurit (L'hymne au Drapeau)",
+            "currency":"Lek",
+            "capital_city":"Tirana"
+        },
+        {
+            "title":"Allemagne",
+            "lat":51.1657065,
+            "lon":10.452764000000002,
+            "anthem":"Deutschlandlied (Chant d'Allemagne)",
+            "currency":"Euro",
+            "capital_city":"Berlin"
+        },
+        {
+            "title":"Autriche",
+            "lat":47.6975425,
+            "lon":13.34931899999998,
+            "anthem":"Land der Berge, Land am Strome (Pays des Montagnes, Pays sur le fleuve)",
+            "currency":"Euro",
+            "capital_city":"Vienne"
+        },
+        {
+            "title":"Belgique",
+            "lat":50.499527,
+            "lon":4.475402500000001,
+            "anthem":"La Brabançonne",
+            "currency":"Euro",
+            "capital_city":"Bruxelles"
+        },
+        {
+            "title":"Biélorussie",
+            "lat":53.711111,
+            "lon":27.973846999999978,
+            "anthem":"My, Bielaroussy (Nous, les Biélorusses)",
+            "currency":"Rouble Biélorusse",
+            "capital_city":"Minsk"
+        },
+        {
+            "title":"Bosnie Hérzégovine",
+            "lat":43.8926525,
+            "lon":17.67058399999999,
+            "anthem":"Intermeco (Intermezzo)",
+            "currency":"Mark convertible",
+            "capital_city":"Sarajevo"
+        },
+        {
+            "title":"Bulgarie",
+            "lat":42.729862,
+            "lon":25.491666500000008,
+            "anthem":"Mila Rodino (Chère Patrie)",
+            "currency":"Lev",
+            "capital_city":"Sofia"
+        },
+        {
+            "title":"Croatie",
+            "lat":44.48732,
+            "lon":16.460305500000004,
+            "anthem":"Lijepa naša domovino (Notre belle patrie)",
+            "currency":"Kuna",
+            "capital_city":"Zagreb"
+        },
+        {
+            "title":"Danemark",
+            "lat":56.15540300000001,
+            "lon":11.617222500000025,
+            "anthem":"Der er et yndigt land1 (Il se trouve un beau pays)",
+            "currency":"Couronne Danoise",
+            "capital_city":"Copenhague"
+        },
+        {
+            "title":"Ecosse",
+            "lat":56.4906712,
+            "lon":-4.2026458,
+            "anthem":"Aucun hymne",
+            "currency":"Livre Sterling",
+            "capital_city":"Edimbourg"
+        },
+        {
+            "title":"Espagne",
+            "lat":39.896026500000005,
+            "lon":-2.487694499999975,
+            "anthem":"Marche Real (Marche Royale)",
+            "currency":"Euro",
+            "capital_city":"Madrid"
+        },
+        {
+            "title":"Estonie",
+            "lat":58.5962085,
+            "lon":25.023777999999993,
+            "anthem":"Mu isamaa, mu õnn ja rõõm (Ma patrie, mon bonheur et ma joie)",
+            "currency":"Euro",
+            "capital_city":"Tallinn"
+        },
+        {
+            "title":"Finlande",
+            "lat":64.9524155,
+            "lon":26.068943999999988,
+            "anthem":"Maamme (Notre Pays)",
+            "currency":"Euro",
+            "capital_city":"Oslo"
+        },
+        {
+            "title":"France",
+            "lat":46.227638,
+            "lon":2.213749,
+            "anthem":"La Marseillaise",
+            "currency":"Euro",
+            "capital_city":"Paris"
+        },
+        {
+            "title":"Grèce",
+            "lat":38.2752831620555,
+            "lon":23.810343366924002,
+            "anthem":"Ýmnos is tin Eleftherían (Hymne à la Liberté)",
+            "currency":"Euro",
+            "capital_city":"Athènes"
+        },
+        {
+            "title":"Hongrie",
+            "lat":47.164638499999995,
+            "lon":19.508944499999984,
+            "anthem":"Himnusz (Hymne)",
+            "currency":"Forint",
+            "capital_city":"Budapest"
+        },
+        {
+            "title":"Irlande",
+            "lat":53.4197505,
+            "lon":-8.24047250000001,
+            "anthem":"Amhrán na bhFiann (La Chanson du soldat)",
+            "currency":"Euro",
+            "capital_city":"Dublin"
+        },
+        {
+            "title":"Islande",
+            "lat":64.9639415,
+            "lon":-19.021169499999985,
+            "anthem":"Lofsöngur (Chanson de la louange)",
+            "currency":"Couronne Islandaise",
+            "capital_city":"Reykjavík"
+        },
+        {
+            "title":"Italie",
+            "lat":41.8739875,
+            "lon":12.564166999999998,
+            "anthem":"Il canto degli Italiani (Le chant des italiens)",
+            "currency":"Euro",
+            "capital_city":"Rome"
+        },
+        {
+            "title":"Lettonie",
+            "lat":56.875583500000005,
+            "lon":24.607721999999995,
+            "anthem":"Dievs, Sveti Latviju (Dieu, bénis la Lettonie)",
+            "currency":"Euro",
+            "capital_city":"Riga"
+        },
+        {
+            "title":"Lituanie",
+            "lat":55.174111999999994,
+            "lon":23.906735999999995,
+            "anthem":"Tautiška giesmė (Chant national)",
+            "currency":"Euro",
+            "capital_city":"Vilnius"
+        },
+        {
+            "title":"Norvège",
+            "lat":64.58301349999999,
+            "lon":17.86410976037601,
+            "anthem":"Ja, vi elsker dette landet (Oui, nous aimons ce pays)",
+            "currency":"Couronne norvégienne",
+            "capital_city":"Oslo"
+        },
+        {
+            "title":"Pays-Bas",
+            "lat":52.133057,
+            "lon":5.29525000000001,
+            "anthem":"Wilhelmus van Nassouwe (Guillaume de Nassau)",
+            "currency":"Euro",
+            "capital_city":"Amsterdam"
+        },
+        {
+            "title":"Pologne",
+            "lat":51.9227505,
+            "lon":19.136874499999976,
+            "anthem":"Mazurek Dąbrowskiego (La mazurka de Dąbrowski)",
+            "currency":"Euro",
+            "capital_city":"Varsovie"
+        },
+        {
+            "title":"Portugal",
+            "lat":39.553444,
+            "lon":-7.839318999999989,
+            "anthem":"A Portuguesa (La Portugaise)",
+            "currency":"Euro",
+            "capital_city":"Lisbonne"
+        },
+        {
+            "title":"Roumanie",
+            "lat":45.9471245,
+            "lon":24.9805135,
+            "anthem":"Deșteaptă-te, române! (Éveille-toi, Roumain !)",
+            "currency":"Leu Roumain",
+            "capital_city":"Bucarest"
+        },
+        {
+            "title":"Russie",
+            "lat":61.5231115,
+            "lon":105.10000000000002,
+            "anthem":"Gossoudarstvennyï gimn Rossiïskoï Federatsii (Hymne national de la fédération de Russie)",
+            "currency":"Rouble",
+            "capital_city":"Moscou"
+        },
+        {
+            "title":"Slovaquie",
+            "lat":48.6656395,
+            "lon":19.709096999999986,
+            "anthem":"Nad Tatrou sa blýska1 (Au-dessus des monts Tatras brille l’éclair)",
+            "currency":"Euro",
+            "capital_city":"Bratislava"
+        },
+        {
+            "title":"Suède",
+            "lat":62.199805999999995,
+            "lon":17.63749324195902,
+            "anthem":"Du gamla, Du fria (Toi l'ancienne, toi la libre)",
+            "currency":"Couronne suédoise",
+            "capital_city":"Stockholm"
+        },
+        {
+            "title":"Suisse",
+            "lat":46.8155135,
+            "lon":8.224471999999992,
+            "anthem":"Cantique Suisse",
+            "currency":"Franc Suisse",
+            "capital_city":"Berne"
+        },
+        {
+            "title":"Ukraine",
+            "lat":48.3798885,
+            "lon":31.168139499999995,
+            "anthem":"Chtche ne vmerla Ukraïny (L'Ukraine n'est pas encore morte)",
+            "currency":"Hryvnia",
+            "capital_city":"Kiev"
+        }
+    ]
+}
