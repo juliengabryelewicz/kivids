@@ -26,16 +26,12 @@ class ColorScreen(Screen):
 	def mix_colors(self):
 		self.ids["result_colors"].clear_widgets()
 		r = g = b = 0
-		rgb_scale = 1
 		for item in self.selectedColors:
-			r += item[0]/255
-			g += item[1]/255
-			b += item[2]/255
-		ratio = max(r, g, b)
-		if ratio > rgb_scale:
-			ratio = float(rgb_scale) / ratio
-			r *= ratio
-			g *= ratio
-			b *= ratio
-		label = RectangleLabel(text=" ", background_color=(r, g, b, 1))
+			r += item[0]
+			g += item[1]
+			b += item[2]
+		r = r/len(self.selectedColors)
+		g = g/len(self.selectedColors)
+		b = b/len(self.selectedColors)
+		label = RectangleLabel(text=" ", background_color=(r/255, g/255, b/255, 1))
 		self.ids["result_colors"].add_widget(label)
