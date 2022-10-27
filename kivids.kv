@@ -153,14 +153,62 @@
 	name: 'PaintScreen'
 	manager: 'screen_manager'
     BoxLayout:
-    	orientation:"vertical"
+        orientation:"horizontal"
         PaintWidget:
             id: paint_widget
-        Button:
-            text: "Effacer"
-            on_press: paint_screen.clear_canvas()
-            size: 75, 50
-            size_hint: None, None
+            size:725,600
+            size_hint:None,None
+        BoxLayout:
+            orientation:"vertical"
+            Button:
+                text:'Blanc'
+                background_color:(1.0, 0.95, 0.95, 1.0)
+                size_hint:None, 60
+                on_press: paint_widget.change_color((1.0, 0.95, 0.95, 1.0))
+            Button:
+                text:'Vert'
+                background_color:(0, 1.0, 0, 1.0)
+                size_hint:None, 60
+                on_press: paint_widget.change_color((0, 1.0, 0, 1.0))
+            Button:
+                text:'Bleu'
+                background_color:(0, 0, 1.0, 1.0)
+                size_hint:None, 60
+                on_press: paint_widget.change_color((0, 0, 1.0, 1.0))
+            Button:
+                text:'Rouge'
+                background_color:(1.0, 0, 0, 1.0)
+                size_hint:None, 60
+                on_press: paint_widget.change_color((1.0, 0, 0, 1.0))
+            Button:
+                text:'Jaune'
+                background_color:(1.0, 1.0, 0, 1.0)
+                size_hint:None, 60
+                on_press: paint_widget.change_color((1.0, 1.0, 0, 1.0))
+            Button:
+                text:'Orange'
+                background_color:(1.0, 0.65, 0, 1.0)
+                size_hint:None, 60
+                on_press: paint_widget.change_color((1.0, 0.65, 0, 1.0))
+            Button:
+                text:'Violet'
+                background_color:(0.5, 0, 0.5, 1.0)
+                size_hint:None, 60
+                on_press: paint_widget.change_color((0.5, 0, 0.5, 1.0))
+            Button:
+                text:'Rose'
+                background_color:(1.0, 0.7, 0.75, 1.0)
+                size_hint:None, 60
+                on_press: paint_widget.change_color((1, 0.7, 0.75, 1.0))
+            Button:
+                text:'Marron'
+                background_color:(0.65, 0.2, 0.2, 1.0)
+                size_hint:None, 60
+                on_press: paint_widget.change_color((0.65, 0.2, 0.2, 1.0))
+            Button:
+                text: "Effacer"
+                on_press: paint_screen.clear_canvas()
+                size_hint:None, 60
 
 <MathsScreen>:
 	id: maths_screen
@@ -193,46 +241,46 @@
             Button:
                 text:'Blanc'
                 background_color:(1.0, 0.95, 0.95, 1.0)
-                on_press: color_screen.add_color((255, 255, 255))
+                on_press: color_screen.add_color((1.0, 0.95, 0.95))
             Button:
                 text:'Noir'
                 background_color:(0, 0, 0, 1.0)
                 on_press: color_screen.add_color((0, 0, 0))
             Button:
                 text:'Gris'
-                on_press: color_screen.add_color((128, 128, 128))
+                on_press: color_screen.add_color((0.5, 0.5, 0.5))
             Button:
                 text:'Vert'
                 background_color:(0, 1.0, 0, 1.0)
-                on_press: color_screen.add_color((0, 255, 0))
+                on_press: color_screen.add_color((0, 1.0, 0))
             Button:
                 text:'Bleu'
                 background_color:(0, 0, 1.0, 1.0)
-                on_press: color_screen.add_color((0, 0, 255))
+                on_press: color_screen.add_color((0, 0, 1.0))
             Button:
                 text:'Rouge'
                 background_color:(1.0, 0, 0, 1.0)
-                on_press: color_screen.add_color((255, 0, 0))
+                on_press: color_screen.add_color((1.0, 0, 0))
             Button:
                 text:'Jaune'
                 background_color:(1.0, 1.0, 0, 1.0)
-                on_press: color_screen.add_color((255, 255, 0))
+                on_press: color_screen.add_color((1.0, 1.0, 0))
             Button:
                 text:'Orange'
                 background_color:(1.0, 0.65, 0, 1.0)
-                on_press: color_screen.add_color((255, 165, 0))
+                on_press: color_screen.add_color((1.0, 0.65, 0))
             Button:
                 text:'Violet'
                 background_color:(0.5, 0, 0.5, 1.0)
-                on_press: color_screen.add_color((128, 0, 128))
+                on_press: color_screen.add_color((0.5, 0, 0.5))
             Button:
                 text:'Rose'
                 background_color:(1.0, 0.7, 0.75, 1.0)
-                on_press: color_screen.add_color((255, 192, 203))
+                on_press: color_screen.add_color((1.0, 0.7, 0.75))
             Button:
                 text:'Marron'
                 background_color:(0.65, 0.2, 0.2, 1.0)
-                on_press: color_screen.add_color((165, 42, 42))
+                on_press: color_screen.add_color((0.65, 0.2, 0.2))
         Label:
             text:'Couleurs choisies'
             font_size:'30sp'

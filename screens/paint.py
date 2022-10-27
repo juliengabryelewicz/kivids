@@ -13,11 +13,18 @@ class PaintScreen(Screen):
 
 class PaintWidget(Widget):
 
+	def __init__(self, **kwargs):
+		super(PaintWidget, self).__init__(**kwargs)
+		self.selectedColor = (1,1,1,1)
+
+	def change_color(self,color):
+		self.selectedColor = color
+
 	def on_touch_down(self, touch):
 		try:
-			color = (random.random(), 1, 1)
+			color = self.selectedColor
 			with self.canvas:
-				Color(*color, mode='hsv')
+				Color(*color, mode='rgba')
 				d = 30.
 				touch.ud['line'] = Line(points=(touch.x, touch.y))
 		except Exception as err:

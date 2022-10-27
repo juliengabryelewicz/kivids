@@ -13,7 +13,7 @@ class ColorScreen(Screen):
 		self.selectedColors = []
 
 	def add_color(self, color):
-		label = RectangleLabel(background_color=(color[0]/255, color[1]/255, color[2]/255, 1))
+		label = RectangleLabel(background_color=(color[0], color[1], color[2], 1))
 		self.ids["choice_colors"].add_widget(label)
 		self.selectedColors.append(color)
 		self.mix_colors()
@@ -33,5 +33,5 @@ class ColorScreen(Screen):
 		r = r/len(self.selectedColors)
 		g = g/len(self.selectedColors)
 		b = b/len(self.selectedColors)
-		label = RectangleLabel(text=" ", background_color=(r/255, g/255, b/255, 1))
+		label = RectangleLabel(text=" ", background_color=(r, g, b, 1))
 		self.ids["result_colors"].add_widget(label)
